@@ -1,0 +1,186 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+
+body {
+    background-color: #271d24;
+    color: #f1a76b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.8;
+}
+
+/* ================= HEADER ================= */
+
+.cabeceraDePaginas {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.logo-img {
+    max-width: 220px;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.main-menu a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f1a76b;
+    color: #271d24;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.main-menu a:hover {
+    background-color: #f8e5b9;
+}
+
+/* ================= HERO ================= */
+
+.hero-container {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ================= SECTIONS (CLARO) ================= */
+
+.fondoContenedor {
+    background-color: #f8e5b9;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.fondoContenedor h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #271d24;
+}
+
+/* ================= ARTICLE (OSCURO, COMO INDEX) ================= */
+
+.content-row {
+    background-color: #271d24;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* ================= TEXT ================= */
+
+.content-text {
+    flex: 1;
+}
+
+.content-text p {
+    margin-bottom: 1rem;
+}
+
+.content-text ul {
+    list-style: none;
+}
+
+.content-text li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+/* precios */
+.content-text span {
+    font-weight: bold;
+    color: #f1a76b;
+}
+
+/* ================= IMAGES ================= */
+
+.content-media {
+    flex-shrink: 0;
+}
+
+.section-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* versiones más chicas */
+.section-img--small {
+    max-width: 240px;
+}
+
+/* ================= BUTTON ================= */
+
+.boton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f1a76b;
+    color: #271d24;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#pieDePagina {
+    background-color: #f1a76b;
+    color: #271d24;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (min-width: 768px) {
+
+    .main-menu {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .content-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-text li {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
