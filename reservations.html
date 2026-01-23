@@ -1,145 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva/Contactanos</title>
-    <link rel="stylesheet" href="./css/contactStyle.css">
+    <title>Reservations | Coffee House</title>
+
+    <link rel="stylesheet" href="./css/reservationsStyle.css">
+
 </head>
+
 <body>
-    <header>
-        <div class="cabeceraDePaginas" id="inicio">
-            <img src="./imagenes/coffeeHouseLogoTransparente.png" alt="Logo Coffee House" title="Coffee House" width="300px"></img>
-            <nav id="menuHeader">
-                <button><a href="./index.html#menuHeader" class="boton">INICIO</a></button>
-                <button><a href="./index.html#inicio" class="boton">NUESTRA HISTORIA</a></button>
-                <button><a href="./menu.html" class="boton">NUESTROS PRODUCTOS</a></button>
-                <button><a href="./menu.html#degustaciones" class="boton">DEGUSTACIONES Y PACKS</a></button>
-                <button><a href="#inicio" class="boton">RESERVAS/CONTACTO</a></button>
-            </nav>
+
+<header class="cabeceraDePaginas" id="top">
+
+    <div class="centeredMltm">
+        <img 
+            src="./assets/img/coffeeHouseLogoTransparente.png"
+            alt="Coffee House logo"
+            class="logo-img"
+        >
+    </div>
+
+    <nav aria-label="Main navigation">
+        <ul class="main-menu">
+            <li><a href="./index.html" class="boton">Home</a></li>
+            <li><a href="./menu.html" class="boton">Menu</a></li>
+            <li><a href="#top" class="boton">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <img 
+            src="./assets/img/reservas.png"
+            alt="Reserve your table"
+            class="hero-img"
+        >
+    </div>
+
+</header>
+
+<main>
+
+<!-- ================= RESERVATION FORM ================= -->
+
+<section class="fondoContenedor">
+    <h2>Make a Reservation</h2>
+
+    <article class="content-row">
+
+        <!-- FORM -->
+        <div class="content-text">
+
+            <form id="reservationForm" novalidate>
+
+                <fieldset>
+                    <legend>Reservation Details</legend>
+
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required>
+
+                    <label for="phone">Phone *</label>
+                    <input type="text" id="phone" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" required>
+
+                    <label for="time">Time *</label>
+                    <input type="time" id="time" required>
+
+                    <label for="people">Number of People *</label>
+                    <input type="number" id="people" min="1" max="10" required>
+
+                    <label for="type">Reservation Type *</label>
+                    <select id="type" required>
+                        <option value="">Select an option</option>
+                        <option value="Coffee House Visit">Coffee House Visit</option>
+                        <option value="Coffee Tasting">Coffee Tasting</option>
+                        <option value="Special Event">Special Event</option>
+                    </select>
+
+                    <label for="comments">Comments (optional)</label>
+                    <textarea id="comments" rows="4"></textarea>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="boton">Reserve</button>
+                    <button type="reset" class="boton">Clear</button>
+                </div>
+
+            </form>
+
         </div>
-    </header>
-    <main>
-        <section>
-            <div class="divsHijos">
-                <div class="contenedor">
-                    <form name="input" action="contacto.html" method="post">
-                        <label for="EleccionDeDisciplina">Contanos el motivo de contacto, te contactaremos a la brevedad:</label>
-                        <input list="motivo" id="motivoDeConsulta" name="motivoDeConsulta">
-                        <datalist id="motivo">
-                            <option value="Reservar una mesa"></option>
-                            <option value="Degustaciones"></option>
-                            <option value="Pack degustacion"></option>
-                            <option value="Giftcards"></option>
-                            <option value="Otro"></option>
-                        </datalist>
-                        <br>
-                        <p>Si son varios motivos, especificalos aca:</p>
-                        <input id="reserva" type="checkbox" name="siSonVarios">
-                        <label for="reserva">Reservar una mesa</label><br>
-                        <input id="degus" type="checkbox" name="siSonVarios">
-                        <label for="degus">Degustaciones</label><br>
-                        <input id="pack" type="checkbox" name="siSonVarios">
-                        <label for="pack">Pack degustacion</label><br>
-                        <input id="gift" type="checkbox" name="siSonVarios">
-                        <label for="gift">Adquirir Giftcards</label><br>
-                        <input id="otro" type="checkbox" name="siSonVarios">
-                        <label for="otro">Otro</label><br>
 
-                        <p>Completa tus datos:</p>
-                        <label for="nombre" type="text" id="nombre">Nombre y Apellido:</label><br>
-                        <input type="text" name="nombre" id="nombre">
-                        <br>
-                        <label for="e-mail" type="text" id="e-mail">E-mail:</label><br>
-                        <input type="text" name="nombre" id="nombre">
-                        <br>
-                        <label for="telefono" type="text" id="telefono">Teléfono de contacto:</label><br>
-                        <input type="text" name="telefono" id="telefono">
-                        <br>
-
-                        <p>En qué franja horaria te gustaría que nos comuniquemos?:</p>
-                        <input id="mañana" type="radio" name="turno">
-                        <label for="mañana">Mañana</label><br>
-                        <input id="tarde" type="radio" name="turno">
-                        <label for="tarde">Tarde</label><br>
-                        <input id="noche" type="radio" name="turno">
-                        <label for="noche">Noche</label><br>
-                        
-                        <label for="start">Fecha de tu reserva:</label>
-                        <input type="date" id="start" name="trip-start" value="2024-05-20" min="2024-05-21" max="2024-12-31" />
-                        <br><br>
-                        <label for="hora" type="text" id="hr">Horario de la reserva:</label><br>
-                        <input type="text" name="hora" id="hr">
-                        <br><br>
-                        <label for="cantidad" type="number">Para cuántas personas querés reservar:</label>
-                        <input type="number" name="cantidad" id="cantidad" min="1">
-                        <br>
-                        
-                        <p>¿Tenés un cupón o giftcard?</p>
-                        <input id="siTengo" type="radio" name="noSiTengo">
-                        <label for="siTengo">Si</label>
-                        <br>
-                        <input id="noTengo" type="radio" name="noSiTengo">
-                        <label for="noTengo">No</label>
-                        <br>
-
-                        <p class="formulario">Dejanos tu comentario:</p>
-                        <textarea name="comentarios" id="comentarios" cols="45" rows="10"></textarea>
-                        <br>
-                        <button class="boton"><input type="submit" value="Enviar"></button>
-                    </form>
-                </div>
-                <div class="contenedor" id="importante">
-                    <img src="./imagenes/reservas.png" alt="cupon promocional" width="575px">
-                    <div class="contenedor">
-                        <h1>IMPORTANTE:</h1>
-                            <p>Nuestro horarios de atención son desde las 8.30 hasta las 22.00 hs de martes a domingo.</p>
-                            <p>En COFFEE HOUSE, ofrecemos asesoramiento personalizado a todos nuestros cliente. Si no te estas comunicando para reservar una mesa, por favor, completa igual la fecha y el horario en el que te gustaria que nos comuniquemos con vos y brindarte asesoramiento personalizado tanto como de las degustaciones, como tambien de los packs.</p>
-                            <p>En caso de querer concretar una degustacion o adquirir un pack, nuestro asistentes te informaran sobre todos los detalles. Esperamos tu consulta!</p>
-                    </div>
-                </div>
+        <!-- INFO -->
+        <div class="content-media">
+            <div class="info-box">
+                <h3>Important Information</h3>
+                <p>
+                    Our opening hours are from <strong>8:00 AM to 10:00 PM</strong>.
+                    Reservations are subject to availability.
+                </p>
+                <p>
+                    For tastings and special events, our team will contact you
+                    to confirm details.
+                </p>
             </div>
-        </section>
-            <div id="Contact">
-                <div class="centeredMltm">
-                    <a href="https://maps.app.goo.gl/4ouNwFFLoa9yxdpt7" target="_blank">
-                        <img src="./imagenes/iconoUbicacion.png" alt="Ubicacion de Coffee House" height="50px">
-                    </a>
-                    <h2>UBICACION</h2>
-                    <p>Tte. Manuel Origone 151, Hurlingham</p>
-                </div>
-
-                <div class="centeredMltm">
-                    <a href="https://wa.me/5491166662155" target="_blank">
-                        <img src="./imagenes/iconoLlamar.png" alt="Telefono de Coffee House" height="50px">
-                    </a>
-                    <h2>CONTACTO</h2>
-                    <p>011 6666 2155</p>
-                </div>
-
-                <div class="centeredMltm">
-                    <img src="./imagenes/iconoHr.png" alt="Horario de Coffee House" height="50px">
-                    <h2>HORARIO</h2>
-                    <p>08.30hs a 22.00hs</p>
-                </div>
-
-                <div class="centeredMltm"> 
-                    <a href="https://www.instagram.com/unahurlingham/?hl=es" target="_blank">
-                        <img src="./imagenes/iconoRedes.png" alt="Visita nuestro Instagram" height="50px">
-                    </a>
-                    <h2>VISITA NUESTRAS REDES</h2>
-                    <p>Comparte tu experiencia</p>
-                </div>
-            </div>
-    </main>
-    <footer>
-        <button class="boton"><a href="#inicio">VOLVER AL INICIO</a></button>
-        <hr>
-        <div id="pieDePagina">
-            <span>- TALLER DE LENGUAJES DE MARCADO Y TECNOLOGIAS WEB - </span><br>
-            <span>- LUCIA CELESTE TURREIRO - COMISION 1 -</span><br>
-            <span>- LUCIA.TURREIRO@ESTUDIANTES.UNAHUR.EDU.AR -</span><br>
         </div>
-    </footer>
+
+    </article>
+</section>
+
+<!-- ================= RESERVATIONS LIST ================= -->
+
+<section class="fondoContenedor">
+    <h2>Reservations List</h2>
+
+    <div id="reservationsList" class="content-text placeholder-text">
+        No reservations yet.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <a href="#top" class="boton">Back to top</a>
+    <hr>
+    <div id="pieDePagina">
+        <p>Web Development Project – HTML, CSS & JavaScript</p>
+        <p>Lucia Celeste Turreiro</p>
+        <p>UNAHUR – Web Technologies</p>
+    </div>
+</footer>
+
+<script src="./javascript/app.js"></script>
+
 </body>
 </html>

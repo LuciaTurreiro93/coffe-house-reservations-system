@@ -1,0 +1,221 @@
+/* ================= BASE ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #271d24;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1a76b;
+    line-height: 1.8;
+}
+
+/* ================= HEADER ================= */
+
+.cabeceraDePaginas {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo-img {
+    width: 280px;
+    margin: 1.5rem auto;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.boton {
+    text-decoration: none;
+    background-color: #f1a76b;
+    color: #271d24;
+    padding: 0.6rem 1.4rem;
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #f8e5b9;
+}
+
+/* ================= HERO ================= */
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ================= SECTIONS ================= */
+
+.fondoContenedor {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(248, 229, 185, 0.85);
+    border-radius: 14px;
+}
+
+/* Título de sección */
+.fondoContenedor h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #271d24;
+    font-size: 2rem;
+}
+
+/* ================= CONTENT LAYOUT ================= */
+
+.content-row {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ===== Área oscura interna (MISMO CRITERIO QUE INDEX) ===== */
+
+.content-text {
+    flex: 1;
+    background-color: #271d24;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* ================= FORM ================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.95rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #f1a76b;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ================= MEDIA ================= */
+
+.content-media {
+    flex: 1;
+    text-align: center;
+}
+
+.section-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+/* Caja informativa debajo de imagen */
+.info-box {
+    background-color: #271d24;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #f1a76b;
+}
+
+.info-box h3 {
+    margin-bottom: 0.8rem;
+}
+
+/* ================= PLACEHOLDER LIST ================= */
+
+.placeholder-text {
+    text-align: center;
+    color: #271d24;
+    font-style: italic;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    margin: 4rem 1rem 2rem;
+}
+
+footer hr {
+    margin: 2rem 0;
+    border: none;
+    height: 2px;
+    background-color: #f1a76b;
+}
+
+#pieDePagina {
+    background-color: #f1a76b;
+    color: #271d24;
+    padding: 1.2rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    .logo-img {
+        width: 220px;
+    }
+
+    .fondoContenedor {
+        padding: 1.5rem;
+    }
+}
