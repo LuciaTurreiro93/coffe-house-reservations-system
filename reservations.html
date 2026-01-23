@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva/Contactanos</title>
+    <link rel="stylesheet" href="./css/contactStyle.css">
+</head>
+<body>
+    <header>
+        <div class="cabeceraDePaginas" id="inicio">
+            <img src="./imagenes/coffeeHouseLogoTransparente.png" alt="Logo Coffee House" title="Coffee House" width="300px"></img>
+            <nav id="menuHeader">
+                <button><a href="./index.html#menuHeader" class="boton">INICIO</a></button>
+                <button><a href="./index.html#inicio" class="boton">NUESTRA HISTORIA</a></button>
+                <button><a href="./menu.html" class="boton">NUESTROS PRODUCTOS</a></button>
+                <button><a href="./menu.html#degustaciones" class="boton">DEGUSTACIONES Y PACKS</a></button>
+                <button><a href="#inicio" class="boton">RESERVAS/CONTACTO</a></button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="divsHijos">
+                <div class="contenedor">
+                    <form name="input" action="contacto.html" method="post">
+                        <label for="EleccionDeDisciplina">Contanos el motivo de contacto, te contactaremos a la brevedad:</label>
+                        <input list="motivo" id="motivoDeConsulta" name="motivoDeConsulta">
+                        <datalist id="motivo">
+                            <option value="Reservar una mesa"></option>
+                            <option value="Degustaciones"></option>
+                            <option value="Pack degustacion"></option>
+                            <option value="Giftcards"></option>
+                            <option value="Otro"></option>
+                        </datalist>
+                        <br>
+                        <p>Si son varios motivos, especificalos aca:</p>
+                        <input id="reserva" type="checkbox" name="siSonVarios">
+                        <label for="reserva">Reservar una mesa</label><br>
+                        <input id="degus" type="checkbox" name="siSonVarios">
+                        <label for="degus">Degustaciones</label><br>
+                        <input id="pack" type="checkbox" name="siSonVarios">
+                        <label for="pack">Pack degustacion</label><br>
+                        <input id="gift" type="checkbox" name="siSonVarios">
+                        <label for="gift">Adquirir Giftcards</label><br>
+                        <input id="otro" type="checkbox" name="siSonVarios">
+                        <label for="otro">Otro</label><br>
+
+                        <p>Completa tus datos:</p>
+                        <label for="nombre" type="text" id="nombre">Nombre y Apellido:</label><br>
+                        <input type="text" name="nombre" id="nombre">
+                        <br>
+                        <label for="e-mail" type="text" id="e-mail">E-mail:</label><br>
+                        <input type="text" name="nombre" id="nombre">
+                        <br>
+                        <label for="telefono" type="text" id="telefono">Teléfono de contacto:</label><br>
+                        <input type="text" name="telefono" id="telefono">
+                        <br>
+
+                        <p>En qué franja horaria te gustaría que nos comuniquemos?:</p>
+                        <input id="mañana" type="radio" name="turno">
+                        <label for="mañana">Mañana</label><br>
+                        <input id="tarde" type="radio" name="turno">
+                        <label for="tarde">Tarde</label><br>
+                        <input id="noche" type="radio" name="turno">
+                        <label for="noche">Noche</label><br>
+                        
+                        <label for="start">Fecha de tu reserva:</label>
+                        <input type="date" id="start" name="trip-start" value="2024-05-20" min="2024-05-21" max="2024-12-31" />
+                        <br><br>
+                        <label for="hora" type="text" id="hr">Horario de la reserva:</label><br>
+                        <input type="text" name="hora" id="hr">
+                        <br><br>
+                        <label for="cantidad" type="number">Para cuántas personas querés reservar:</label>
+                        <input type="number" name="cantidad" id="cantidad" min="1">
+                        <br>
+                        
+                        <p>¿Tenés un cupón o giftcard?</p>
+                        <input id="siTengo" type="radio" name="noSiTengo">
+                        <label for="siTengo">Si</label>
+                        <br>
+                        <input id="noTengo" type="radio" name="noSiTengo">
+                        <label for="noTengo">No</label>
+                        <br>
+
+                        <p class="formulario">Dejanos tu comentario:</p>
+                        <textarea name="comentarios" id="comentarios" cols="45" rows="10"></textarea>
+                        <br>
+                        <button class="boton"><input type="submit" value="Enviar"></button>
+                    </form>
+                </div>
+                <div class="contenedor" id="importante">
+                    <img src="./imagenes/reservas.png" alt="cupon promocional" width="575px">
+                    <div class="contenedor">
+                        <h1>IMPORTANTE:</h1>
+                            <p>Nuestro horarios de atención son desde las 8.30 hasta las 22.00 hs de martes a domingo.</p>
+                            <p>En COFFEE HOUSE, ofrecemos asesoramiento personalizado a todos nuestros cliente. Si no te estas comunicando para reservar una mesa, por favor, completa igual la fecha y el horario en el que te gustaria que nos comuniquemos con vos y brindarte asesoramiento personalizado tanto como de las degustaciones, como tambien de los packs.</p>
+                            <p>En caso de querer concretar una degustacion o adquirir un pack, nuestro asistentes te informaran sobre todos los detalles. Esperamos tu consulta!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div id="Contact">
+                <div class="centeredMltm">
+                    <a href="https://maps.app.goo.gl/4ouNwFFLoa9yxdpt7" target="_blank">
+                        <img src="./imagenes/iconoUbicacion.png" alt="Ubicacion de Coffee House" height="50px">
+                    </a>
+                    <h2>UBICACION</h2>
+                    <p>Tte. Manuel Origone 151, Hurlingham</p>
+                </div>
+
+                <div class="centeredMltm">
+                    <a href="https://wa.me/5491166662155" target="_blank">
+                        <img src="./imagenes/iconoLlamar.png" alt="Telefono de Coffee House" height="50px">
+                    </a>
+                    <h2>CONTACTO</h2>
+                    <p>011 6666 2155</p>
+                </div>
+
+                <div class="centeredMltm">
+                    <img src="./imagenes/iconoHr.png" alt="Horario de Coffee House" height="50px">
+                    <h2>HORARIO</h2>
+                    <p>08.30hs a 22.00hs</p>
+                </div>
+
+                <div class="centeredMltm"> 
+                    <a href="https://www.instagram.com/unahurlingham/?hl=es" target="_blank">
+                        <img src="./imagenes/iconoRedes.png" alt="Visita nuestro Instagram" height="50px">
+                    </a>
+                    <h2>VISITA NUESTRAS REDES</h2>
+                    <p>Comparte tu experiencia</p>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <button class="boton"><a href="#inicio">VOLVER AL INICIO</a></button>
+        <hr>
+        <div id="pieDePagina">
+            <span>- TALLER DE LENGUAJES DE MARCADO Y TECNOLOGIAS WEB - </span><br>
+            <span>- LUCIA CELESTE TURREIRO - COMISION 1 -</span><br>
+            <span>- LUCIA.TURREIRO@ESTUDIANTES.UNAHUR.EDU.AR -</span><br>
+        </div>
+    </footer>
+</body>
+</html>
